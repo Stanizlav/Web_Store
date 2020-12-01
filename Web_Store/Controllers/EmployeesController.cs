@@ -11,7 +11,14 @@ namespace Web_Store.Controllers
     {
         public IActionResult Index()
         {
-            return View(AuxiliaryData._Employees);
+            return View(AuxiliaryData.Employees);
+        }
+        public IActionResult Details(int id) {
+            var employee = AuxiliaryData.Employees.FirstOrDefault(e => e.Id == id);
+            if (employee is not null)
+                return View(employee);
+            else
+                return NotFound();
         }
     }
 }
