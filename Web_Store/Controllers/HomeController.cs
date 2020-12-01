@@ -24,9 +24,5 @@ namespace Web_Store.Controllers
         public IActionResult SecondAction() {
             return Content(_Configuration["ControllerText"]);
         }
-
-        public IActionResult Employees() {
-            return View(AuxiliaryData._Employees);
-        }
     }
 }
