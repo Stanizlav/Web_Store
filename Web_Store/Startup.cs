@@ -14,7 +14,7 @@ namespace Web_Store
         public Startup(IConfiguration Configuration) => _Configuration = Configuration;
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
