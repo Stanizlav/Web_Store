@@ -12,7 +12,7 @@ namespace Web_Store.Controllers
     {
         private readonly IConfiguration _Configuration;
 
-        private static readonly List<Employee> _Employes = new()
+        private static readonly List<Employee> _Employees = new()
         {
             new Employee { Id = 1, FirstName = "Тихон", LastName = "Вашков", Patronymic = "Фёдорович", Age = 24 },
             new Employee { Id = 2, FirstName = "Аркадий", LastName = "Чинилов", Patronymic = "Михайлович", Age = 27 },
@@ -30,8 +30,8 @@ namespace Web_Store.Controllers
             return Content(_Configuration["ControllerText"]);
         }
 
-        public IActionResult Employes() {
-            return View(model:_Employes);
+        public IActionResult Employees() {
+            return View(model:_Employees);
         }
     }
 }
